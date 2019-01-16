@@ -1,0 +1,17 @@
+@import 'colors';
+
+:root {
+  // Font
+  --default-font-size: 1.6rem;
+  --text-font-color: #414140;
+  --headings-font-color: #6d6e71;
+  --font-family: Georgia, 'Times New Roman', serif;
+  --font-family-secondary: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+  // Box shadow
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
+
+  // Border Bottom
+  --border-bottom: 1px solid var(--color-grey-light-2);
+}

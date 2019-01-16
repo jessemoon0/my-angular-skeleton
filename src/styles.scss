@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+// You can add global styles to this file, and also import other style files */
+
+// Material Styles
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import 'assets/scss/themes/app-material-custom-theme';
+
+// Vendor Styles
+@import 'assets/scss/vendors/my-vendor-file';
+
+// Angular-Skeleton Styles
+@import 'assets/scss/abstracts/variables/variables';
+@import 'assets/scss/abstracts/mixins';
+@import 'assets/scss/abstracts/functions';
+
+@import 'assets/scss/base/base';
+@import 'assets/scss/base/animations';
+@import 'assets/scss/base/typography';
+@import 'assets/scss/base/utilities';
+
+@import 'assets/scss/components/app-mat-button';
+

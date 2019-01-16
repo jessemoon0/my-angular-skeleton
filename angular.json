@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "angular-skeleton"
+  "defaultProject": "angular-skeleton",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

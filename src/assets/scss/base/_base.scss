@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  // Good practice to add box-sizing: border-box in body and inherit here
+  box-sizing: inherit;
+}
+
+// Root font size for REM units (responsive design)
+// Browser default font size is 16px, so we use 62.5% of it that is equal to 10px. So, 1 rem = 10px for easier calculations
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+input, label, button, a, p, i {
+  font-family: var(--font-family);
+  outline: none;
+  margin: 0;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+strong {
+  padding: 0;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
