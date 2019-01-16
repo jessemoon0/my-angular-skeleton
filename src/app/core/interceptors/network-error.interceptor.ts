@@ -4,7 +4,7 @@ import { catchError } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class ErrorInterceptor implements HttpInterceptor {
+export class NetworkErrorInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(req).pipe(

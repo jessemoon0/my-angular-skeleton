@@ -5,7 +5,7 @@
     "types": []
   },
   "angularCompilerOptions": {
-    "preserveWhitespaces": true
+    "preserveWhitespaces": false
   },
   "exclude": [
     "test.ts",

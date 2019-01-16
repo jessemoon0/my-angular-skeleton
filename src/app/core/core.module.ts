@@ -1,11 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { metaReducers, reducers } from './store-app/reducers';
+import { environment } from '../../environments/environment';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router-store';
+import { CustomSerializer } from './store-app/custom-route-serializer';
+import { NetworkErrorInterceptor } from './interceptors';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    StoreRouterConnectingModule.forRoot({stateKey: 'router'}),
+    EffectsModule.forRoot([])
+  ],
+  // Interceptors and global services here
+  providers: [
+    { provide: RouterStateSerializer, useClass: CustomSerializer },
+    { provide: HTTP_INTERCEPTORS, useClass: NetworkErrorInterceptor, multi: true }
   ]
 })
 export class CoreModule { }
