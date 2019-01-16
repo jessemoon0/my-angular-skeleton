@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "solux-landing": {
+    "angular-skeleton": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/solux-landing",
+            "outputPath": "dist/angular-skeleton",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "solux-landing:build"
+            "browserTarget": "angular-skeleton:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "solux-landing:build:production"
+              "browserTarget": "angular-skeleton:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "solux-landing:build"
+            "browserTarget": "angular-skeleton:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "solux-landing-e2e": {
+    "angular-skeleton-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "solux-landing:serve"
+            "devServerTarget": "angular-skeleton:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "solux-landing:serve:production"
+              "devServerTarget": "angular-skeleton:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "solux-landing"
+  "defaultProject": "angular-skeleton"
 }
