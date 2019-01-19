@@ -1,9 +1,21 @@
+@import '../abstracts/mixins';
+
 body {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: var(--default-font-size);
   line-height: 1.7;
   color: var(--text-font-color);
+  // Set a color bg
+  //background: linear-gradient(
+  //    to right bottom,
+  //    var(--color-primary-light),
+  //    var(--color-primary-dark)
+  //) no-repeat;
+  //background-size: cover;
+
+  // Good for responsive design
+  min-height: 100vh;
 }
 
 h1, .h1 {
@@ -23,4 +35,10 @@ h3, .h3 {
 
 p, .p {
   font-size: 1.3rem;
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+  @include respond(phone) {
+    margin: 0;
+  }
 }

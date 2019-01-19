@@ -2,6 +2,10 @@
 
 // Font Related
 .u-font-white { color: var(--color-white) }
+.u-center-text { text-align: center; }
+.u-align-text-left { text-align: left; }
+.u-align-text-right { text-align: right; }
+
 
 // Margins
 
@@ -9,5 +13,11 @@
 
 // Width & Height
 
-// Others
+// Borders
 .u-border { border: var(--border-bottom) }
+
+// Position
+.u-position-relative { position: relative; }
+
+// Display
+.u-display-block { display: block; }

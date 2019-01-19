@@ -27,9 +27,6 @@ export class AppComponent implements OnInit {
 // 3: Use sandbox files to write other feature modules
 // 4: Add my branding in my css variables and in my colors
 
-
-
-// TODO: Add stores and search for more project shared content to add here.
 // TODO: Check lint.
 // TODO: Learn and setup deployment
 // --> Upload to AWS and automate.
