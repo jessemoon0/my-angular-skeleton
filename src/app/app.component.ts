@@ -18,7 +18,8 @@ export class AppComponent implements OnInit {
 
 // *** Supports Safari, IE11, Edge, Chrome, Firefox
 
-// To make apps from this skeleton:
+// To MAKE APPS FROM THIS SKELETON:
+
 // 0: Search everywhere for app-skeleton and replace with my project names
 // 1: Change the component prefixes to my own app
 // --> Don't forget to add the selector in src/lint.json file

@@ -4,9 +4,9 @@ export enum SandboxActionTypes {
   LoadSandbox = '[Sandbox] Load Sandbox'
 }
 
-export class LoadSandboxs implements Action {
+export class LoadSandbox implements Action {
   readonly type = SandboxActionTypes.LoadSandbox;
   constructor() {}
 }
 
-export type SandboxActions = LoadSandboxs;
+export type SandboxActions = LoadSandbox;
