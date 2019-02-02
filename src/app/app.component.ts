@@ -26,9 +26,11 @@ export class AppComponent implements OnInit {
 // 2: Rename variables in material theme and prefixes for scss components
 // 3: Use sandbox files to write other feature modules
 // 4: Add my branding in my css variables and in my colors
+// 5: Add Analytics
 
-// TODO: Check lint.
 // TODO: Learn and setup deployment
 // --> Upload to AWS and automate.
 // TODO: Version bumps.
 // TODO: Remove scss and test-data folder from dist.
+// TODO: Add universal
+
