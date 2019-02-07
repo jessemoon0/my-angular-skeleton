@@ -20,13 +20,18 @@ export class AppComponent implements OnInit {
 
 // To MAKE APPS FROM THIS SKELETON:
 
-// 0: Search everywhere for app-skeleton and replace with my project names
+// 0: Rename project with WebStorm.
+// -> Right click on project file and rename project and directory
+// -> index.html rename <title>
+// -> angular.json rename all angular-skeleton to my project-name
 // 1: Change the component prefixes to my own app
-// --> Don't forget to add the selector in src/lint.json file
+// -> Change prefix in angular.json, also in src/tslint - component-selector,
+// then search everywhere for app-skeleton and replace all with my project names
 // 2: Rename variables in material theme and prefixes for scss components
-// 3: Use sandbox files to write other feature modules
-// 4: Add my branding in my css variables and in my colors
-// 5: Add Analytics
+// 3: Push to GIT: FOLLOW INSTRUCTIONS IN Angular Tutorial
+// 4: Use sandbox files to write other feature modules
+// 5: Add my branding in my css variables and in my colors
+// 6: Add Analytics (optional)
 
 // TODO: Learn and setup deployment
 // --> Upload to AWS and automate.

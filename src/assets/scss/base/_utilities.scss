@@ -1,7 +1,7 @@
 // We add 1-style css classes here to change styles as we need them
 
 // Font Related
-.u-font-white { color: var(--color-white) }
+.u-font-white { color: var(--color-white); }
 .u-center-text { text-align: center; }
 .u-align-text-left { text-align: left; }
 .u-align-text-right { text-align: right; }
@@ -14,10 +14,13 @@
 // Width & Height
 
 // Borders
-.u-border { border: var(--border-bottom) }
+.u-border { border: var(--border-bottom); }
 
 // Position
 .u-position-relative { position: relative; }
 
 // Display
 .u-display-block { display: block; }
+
+// Others
+.u-no-click-allowed { pointer-events: none; }

@@ -11,6 +11,9 @@
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
+        },
+        "@ngrx/schematics:component": {
+          "styleext": "scss"
         }
       },
       "architect": {
