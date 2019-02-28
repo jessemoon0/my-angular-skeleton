@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   }
 }
 
-// *** Supports Safari, IE11, Edge, Chrome, Firefox
+// *** Supports Safari, IE11, Edge, Chrome, Firefox ***
 
 // To MAKE APPS FROM THIS SKELETON:
 
@@ -26,7 +26,8 @@ export class AppComponent implements OnInit {
 // -> angular.json rename all angular-skeleton to my project-name
 // 1: Change the component prefixes to my own app
 // -> Change prefix in angular.json, also in src/tslint - component-selector,
-// then search everywhere for app-skeleton and replace all with my project names
+// then search everywhere for angular-skeleton and replace all with my project names
+// (search on angular.json file if I cant find any)
 // 2: Rename variables in material theme and prefixes for scss components
 // 3: Push to GIT: FOLLOW INSTRUCTIONS IN Angular Tutorial
 // 4: Use sandbox files to write other feature modules
