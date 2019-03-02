@@ -10,7 +10,8 @@
 
 // Angular-Skeleton Styles
 @import 'assets/scss/abstracts/variables/variables';
-@import 'assets/scss/abstracts/mixins';
+@import 'assets/scss/abstracts/responsive-width-mixins';
+@import 'assets/scss/abstracts/responsive-device-mixins';
 @import 'assets/scss/abstracts/functions';
 
 @import 'assets/scss/base/base';

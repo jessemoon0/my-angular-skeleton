@@ -25,7 +25,7 @@ ORDER: Base + Typography > General Layout + grid > Page Layout > Components
 
   1em = 16px
 */
-@mixin respond($breakpoint) { // Remember we are using em
+@mixin width($breakpoint) { // Remember we are using em
   @if $breakpoint == break-500 { @media only screen and (max-width: 31.25em) { @content } } // 500px
   @if $breakpoint == phone { @media only screen and (max-width: 37.5em) { @content } } // 600px
   @if $breakpoint == tab-port { @media only screen and (max-width: 56.25em) { @content } } // 900px

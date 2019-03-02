@@ -1,4 +1,4 @@
-@import '../abstracts/mixins';
+@import '../abstracts/responsive-width-mixins';
 
 body {
   font-family: var(--font-family);
@@ -38,7 +38,7 @@ p, .p {
   &:not(:last-of-type) {
     margin-bottom: 2rem;
   }
-  @include respond(phone) {
+  @include width(phone) {
     margin: 0;
   }
 }

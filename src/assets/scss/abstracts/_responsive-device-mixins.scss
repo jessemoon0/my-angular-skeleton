@@ -1,0 +1,14 @@
+// Get all device media queries from:
+// https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+
+@mixin device($device) {
+  /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+  @if $device == iphone-7-p-l {
+    @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      @content
+    }
+  }
+}
