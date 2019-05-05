@@ -16,10 +16,10 @@ import { EffectsModule } from '@ngrx/effects';
     HttpClientModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    StoreDevtoolsModule.instrument({
+    !environment.production ? StoreDevtoolsModule.instrument({
       maxAge: 25, // Returns last 25 states
       logOnly: environment.production // Boolean. Restricts to log only depending on env
-    }),
+    }) : [],
     StoreRouterConnectingModule.forRoot({stateKey: 'router'}),
     EffectsModule.forRoot([])
   ],
