@@ -3,21 +3,21 @@
 // Material Styles
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import 'assets/scss/themes/app-material-custom-theme';
+@import 'scss/themes/app-material-custom-theme';
 
 // Vendor Styles
-@import 'assets/scss/vendors/my-vendor-file';
+@import 'scss/vendors/my-vendor-file';
 
 // Angular-Skeleton Styles
-@import 'assets/scss/abstracts/variables/variables';
-@import 'assets/scss/abstracts/responsive-width-mixins';
-@import 'assets/scss/abstracts/responsive-device-mixins';
-@import 'assets/scss/abstracts/functions';
+@import 'scss/abstracts/variables/variables';
+@import 'scss/abstracts/responsive-width-mixins';
+@import 'scss/abstracts/responsive-device-mixins';
+@import 'scss/abstracts/functions';
 
-@import 'assets/scss/base/base';
-@import 'assets/scss/base/animations';
-@import 'assets/scss/base/typography';
-@import 'assets/scss/base/utilities';
+@import 'scss/base/base';
+@import 'scss/base/animations';
+@import 'scss/base/typography';
+@import 'scss/base/utilities';
 
-@import 'assets/scss/components/app-mat-button';
+@import 'scss/components/app-mat-button';
 
