@@ -4,7 +4,7 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 const appRoutes: Routes = [
   {
     path: 'sandbox',
-    loadChildren: './sandbox/sandbox.module#SandboxModule'
+    loadChildren: () => import('./sandbox/sandbox.module').then((m) => m.SandboxModule)
   },
   {
     path: '',
