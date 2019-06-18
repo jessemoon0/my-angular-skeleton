@@ -17,10 +17,22 @@
       true,
       "check-space"
     ],
+    "component-selector": [
+      true,
+      "element",
+      "app",
+      "kebab-case"
+    ],
     "curly": true,
     "deprecation": {
       "severity": "warn"
     },
+    "directive-selector": [
+      true,
+      "attribute",
+      "app",
+      "camelCase"
+    ],
     "eofline": true,
     "forin": true,
     "import-blacklist": [
