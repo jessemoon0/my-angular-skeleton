@@ -4,6 +4,8 @@ body {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: var(--default-font-size);
+  // Be careful with 3rd party software as this might modify the way their components behave
+  // We can add line-height also per header (depending on the font).
   line-height: 1.7;
   color: var(--text-font-color);
   // Set a color bg
@@ -17,6 +19,8 @@ body {
   // Good for responsive design
   min-height: 100vh;
 }
+
+// We can add line-height also per header (depending on the font).
 
 h1, .h1 {
   font-size: 3.5rem;

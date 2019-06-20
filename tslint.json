@@ -51,6 +51,7 @@
       true,
       140
     ],
+    "max-classes-per-file": false,
     "member-access": false,
     "member-ordering": [
       true,
