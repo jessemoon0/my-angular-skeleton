@@ -2,6 +2,8 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      node: 10
     commands: #Here we add the commands to install stuff in the angular app
       - echo Executing install phase
       - echo Executing 2nd part of install phase
