@@ -14,7 +14,7 @@ import { EffectsModule } from '@ngrx/effects';
   imports: [
     BrowserAnimationsModule,
     HttpClientModule,
-    StoreModule.forRoot(reducers, { metaReducers }),
+    StoreModule.forRoot(reducers, { metaReducers, runtimeChecks: { strictStateImmutability: true, strictActionImmutability: true } }),
     !environment.production ? StoreDevtoolsModule.instrument({
       maxAge: 25, // Returns last 25 states
       logOnly: environment.production // Boolean. Restricts to log only depending on env
