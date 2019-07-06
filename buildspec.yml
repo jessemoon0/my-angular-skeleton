@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    commands: #Here we add the commands to install stuff in the angular app
+      - echo Executing install phase
+      - echo Executing 2nd part of install phase
+    finally:
+      - echo Executing install Finally
+  pre_build:
+    commands:
+      - echo Executing pre_build phase
+    finally:
+      - echo Executing pre_build Finally
+  build:
+    commands:
+      - echo Executing build phase
+    finally:
+      - echo Executing build Finally
+  post_build:
+    commands:
+      - echo Executing post_build phase
+    finally:
+      - echo Executing post_build Finally
