@@ -18,8 +18,13 @@ phases:
     commands:
       - npm run build
       - npm run test:ci
-artifacts:
-  files:
-    - '**/*'
-  discard-paths: yes
-  base-directory: 'dist/angular-skeleton'
+  post_build:
+    commands:
+      - aws s3 sync ./dist/angular-skeleton s3://tut-deploy-ang-production --acl 'public-read' --delete
+
+# THIS CONFIG IS IF WE WANT TO SEND THE FILES TO AN ARTIFACT
+#artifacts:
+#  files:
+#    - '**/*'
+#  discard-paths: yes
+#  base-directory: 'dist/angular-skeleton'
