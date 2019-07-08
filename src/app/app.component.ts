@@ -37,6 +37,5 @@ export class AppComponent implements OnInit {
 // TODO: Learn and setup deployment
 // --> Upload to AWS and automate.
 // TODO: Version bumps.
-// TODO: Remove scss and test-data folder from dist.
+// TODO: Remove test-data folder from dist.
 // TODO: Add universal
-
