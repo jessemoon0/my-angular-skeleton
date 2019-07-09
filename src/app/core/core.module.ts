@@ -9,9 +9,11 @@ import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router
 import { CustomSerializer } from './store-app/custom-route-serializer';
 import { NetworkErrorInterceptor } from './interceptors';
 import { EffectsModule } from '@ngrx/effects';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     HttpClientModule,
     StoreModule.forRoot(reducers, { metaReducers, runtimeChecks: { strictStateImmutability: true, strictActionImmutability: true } }),

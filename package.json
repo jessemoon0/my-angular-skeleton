@@ -9,7 +9,11 @@
     "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "analyze-bundle": "ng build --stats-json && webpack-bundle-analyzer dist/angular-skeleton/stats-es2015.json"
+    "analyze-bundle": "ng build --stats-json && webpack-bundle-analyzer dist/angular-skeleton/stats-es2015.json",
+    "compile:server": "webpack --config webpack.server.config.js --progress --colors",
+    "serve:ssr": "node dist/server",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
+    "build:client-and-server-bundles": "ng build --prod && ng run angular-skeleton:server:production --bundleDependencies all"
   },
   "private": true,
   "dependencies": {
@@ -23,13 +27,17 @@
     "@angular/material": "^8.0.2",
     "@angular/platform-browser": "~8.1.0",
     "@angular/platform-browser-dynamic": "~8.1.0",
+    "@angular/platform-server": "~8.1.0",
     "@angular/router": "~8.1.0",
     "@ngrx/effects": "^8.0.1",
     "@ngrx/entity": "^8.0.1",
     "@ngrx/router-store": "^8.0.1",
     "@ngrx/store": "^8.0.1",
+    "@nguniversal/express-engine": "^8.1.1",
+    "@nguniversal/module-map-ngfactory-loader": "8.1.1",
     "core-js": "^2.6.9",
     "css-vars-ponyfill": "^2.0.2",
+    "express": "^4.15.2",
     "rxjs": "~6.5.2",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
@@ -54,8 +62,10 @@
     "karma-jasmine-html-reporter": "^1.4.0",
     "ngrx-store-freeze": "^0.2.4",
     "protractor": "~5.4.0",
+    "ts-loader": "^5.2.0",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
-    "typescript": "~3.4.5"
+    "typescript": "~3.4.5",
+    "webpack-cli": "^3.1.0"
   }
 }
