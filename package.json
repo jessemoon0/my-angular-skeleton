@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
+    "serverless": "serverless",
     "start": "ng serve --port 4001",
     "build": "ng build --prod",
     "test": "ng test",

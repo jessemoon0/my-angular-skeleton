@@ -7,8 +7,8 @@ phases:
     commands:
       - npm ci
       - npm run build:ssr
-      - serverless package
-      - serverless deploy
+      - npm run serverless package
+      - npm run serverless deploy
 
 # THIS CONFIG IS IF WE WANT TO SEND THE FILES TO AN ARTIFACT
 #artifacts:
