@@ -29,6 +29,7 @@
     "@angular/platform-browser-dynamic": "~8.1.0",
     "@angular/platform-server": "~8.1.0",
     "@angular/router": "~8.1.0",
+    "@ng-toolkit/serverless": "^7.1.2",
     "@ngrx/effects": "^8.0.1",
     "@ngrx/entity": "^8.0.1",
     "@ngrx/router-store": "^8.0.1",
@@ -40,7 +41,8 @@
     "express": "^4.15.2",
     "rxjs": "~6.5.2",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "aws-serverless-express": "^3.2.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.801.0",
