@@ -5,6 +5,8 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
+      - npm ci
+      - npm run build:ssr
       - serverless package
       - serverless deploy
 
