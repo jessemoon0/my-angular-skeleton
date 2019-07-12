@@ -1,41 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import cssVars from 'css-vars-ponyfill';
+import { isPlatformBrowser , DOCUMENT} from '@angular/common';
+import { environment } from '../environments/environment';
+import { Component , OnInit, Inject, PLATFORM_ID} from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `<router-outlet></router-outlet>`
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  title = 'angularSeo';
 
-  ngOnInit(): void {
-    this.useCssVarsInIE();
-  }
+    public ngOnInit(): void {
+        if (!isPlatformBrowser(this.platformId)) {
+            let bases = this.document.getElementsByTagName('base');
+    
+            if (bases.length > 0) {
+                bases[0].setAttribute('href', environment.baseHref);
+            }
+        }
+    }
 
-  useCssVarsInIE() {
-    cssVars();
-  }
+
+ constructor(@Inject(PLATFORM_ID) private platformId: any, @Inject(DOCUMENT) private document: any) {}
 }
-
-// *** Supports Safari, IE11, Edge, Chrome, Firefox ***
-
-// To MAKE APPS FROM THIS SKELETON:
-
-// 0: Rename project with WebStorm.
-// -> Right click on project file and rename project and directory
-// -> index.html rename <title>
-// -> angular.json rename all angular-skeleton to my project-name
-// 1: Change the component prefixes to my own app
-// -> Change prefix in angular.json, also in src/tslint - component-selector,
-// then search everywhere for angular-skeleton and replace all with my project names
-// (search on angular.json file if I cant find any)
-// 2: Rename variables in material theme and prefixes for scss components
-// 3: Push to GIT: FOLLOW INSTRUCTIONS IN Angular Tutorial
-// 4: Use sandbox files to write other feature modules
-// 5: Add my branding in my css variables and in my colors
-// 6: Add Analytics (optional)
-
-// TODO: Learn and setup deployment
-// --> Upload to AWS and automate.
-// TODO: Version bumps.
-// TODO: Remove test-data folder from dist.
-// TODO: Add universal
