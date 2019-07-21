@@ -4,11 +4,11 @@ export interface SandboxState {
 
 }
 
-export const initialState: SandboxState = {
+export const sandboxInitialState: SandboxState = {
 
 };
 
-export function reducer(state = initialState, action: SandboxActions): SandboxState {
+export function sandboxReducer(state = sandboxInitialState, action: SandboxActions): SandboxState {
   switch (action.type) {
 
     default:

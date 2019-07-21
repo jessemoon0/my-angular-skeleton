@@ -18,7 +18,7 @@ import { SandboxEffects } from './store-sandbox/effects/sandbox.effects';
   imports: [
     SharedModule,
     SandboxRoutingModule,
-    StoreModule.forFeature('sandboxState', fromSandbox.reducer),
+    StoreModule.forFeature('sandboxState', fromSandbox.sandboxReducer),
     EffectsModule.forFeature([SandboxEffects])
   ]
 })
