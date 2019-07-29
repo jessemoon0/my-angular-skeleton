@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import { AppState } from '../../core/store-app/reducers';
+import { selectSandboxData } from '../store-sandbox/selectors/sandbox.selectors';
 
 @Component({
   selector: 'app-sandbox-root',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sandbox-root.component.scss']
 })
 export class SandboxRootComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  
+  constructor(private store: Store<AppState>) { }
+  
+  ngOnInit(): void {
+    this.store.pipe(select(selectSandboxData))
+      .subscribe(
+        (data) => console.log('Sandbox Data: ', data)
+      );
   }
-
 }
