@@ -37,7 +37,7 @@ h3, .h3 {
   color: var(--headings-font-color);
 }
 
-p, .p {
+p, label, .p {
   font-size: 1.3rem;
   &:not(:last-of-type) {
     margin-bottom: 2rem;
