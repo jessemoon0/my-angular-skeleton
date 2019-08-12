@@ -97,6 +97,7 @@
     "no-unused-expression": true,
     "no-use-before-declare": true,
     "no-var-keyword": true,
+    "object-literal-shorthand": true,
     "object-literal-sort-keys": false,
     "one-line": [
       true,
