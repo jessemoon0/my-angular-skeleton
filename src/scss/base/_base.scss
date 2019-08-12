@@ -71,6 +71,10 @@ strong {
   padding: 0;
 }
 
+input[type='radio'] + label {
+  vertical-align: text-bottom;
+}
+
 ::selection {
   background-color: var(--color-primary);
   color: var(--color-white);
