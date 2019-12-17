@@ -50,8 +50,7 @@
     "max-line-length": [
       true,
       {
-        "limit": 140,
-        "ignore-pattern": "^import [^,]+ from [^export | implements "
+        "limit": 140
       }
     ],
     "max-classes-per-file": false,
