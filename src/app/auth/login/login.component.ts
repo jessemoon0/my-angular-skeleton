@@ -4,7 +4,7 @@ import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { LoginAction } from '../store-auth/actions/auth.actions';
-import { AppState } from '../../core/store-app/reducers';
+import { IAppState } from '../../core/store-app/reducers';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +15,7 @@ export class LoginComponent implements OnDestroy {
 
   private destroy$: Subject<void> = new Subject();
 
-  constructor(private authService: AuthService, private store: Store<AppState>) { }
+  constructor(private authService: AuthService, private store: Store<IAppState>) { }
 
   ngOnDestroy() {
     this.destroy$.next();

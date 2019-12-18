@@ -1,11 +1,11 @@
 import { SandboxActions, SandboxActionTypes } from '../actions/sandbox.actions';
 
-export interface SandboxState {
+export interface ISandboxState {
   isSandboxActivated: boolean;
   sandboxData: any[];
 }
 
-export const sandboxInitialState: SandboxState = {
+export const sandboxInitialState: ISandboxState = {
   isSandboxActivated: false,
   sandboxData: [
     {
@@ -20,7 +20,7 @@ export const sandboxInitialState: SandboxState = {
   ]
 };
 
-export function sandboxReducer(state = sandboxInitialState, action: SandboxActions): SandboxState {
+export function sandboxReducer(state = sandboxInitialState, action: SandboxActions): ISandboxState {
   switch (action.type) {
     case SandboxActionTypes.SandboxActivated: {
       return {

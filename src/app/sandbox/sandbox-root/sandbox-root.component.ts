@@ -1,21 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
-import { AppState } from '../../core/store-app/reducers';
+import { IAppState } from '../../core/store-app/reducers';
 import { selectSandboxData } from '../store-sandbox/selectors/sandbox.selectors';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-sandbox-root',
   templateUrl: './sandbox-root.component.html',
   styleUrls: ['./sandbox-root.component.scss']
 })
-export class SandboxRootComponent implements OnInit {
+export class SandboxRootComponent implements OnInit, OnDestroy {
   
-  constructor(private store: Store<AppState>) { }
+  private destroy$: Subject<void> = new Subject<void>();
+  
+  constructor(private store: Store<IAppState>) { }
   
   ngOnInit(): void {
     this.store.pipe(select(selectSandboxData))
+      .pipe(takeUntil(this.destroy$))
       .subscribe(
         (data) => console.log('Sandbox Data: ', data)
       );
+  }
+  
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

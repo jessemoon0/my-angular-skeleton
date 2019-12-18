@@ -1,32 +1,28 @@
 {
-  "rulesDirectory": [
-    "codelyzer"
-  ],
+  "extends": ["tslint:recommended"],
   "lintOptions": {
     "typeCheck": true
   },
-  "extends": [
-    "tslint:recommended"
-  ],
   "rules": {
     "array-type": false,
+    "arrow-parens": false,
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
-    "comment-format": [
-      true,
-      "check-space"
-    ],
+    "comment-format": [true, "check-space"],
+    "component-class-suffix": true,
     "component-selector": [
       true,
       "element",
       "app",
       "kebab-case"
     ],
+    "contextual-lifecycle": true,
     "curly": true,
     "deprecation": {
-      "severity": "warn"
+      "severity": "warning"
     },
+    "directive-class-suffix": true,
     "directive-selector": [
       true,
       "attribute",
@@ -40,11 +36,8 @@
       "rxjs/Rx"
     ],
     "import-spacing": true,
-    "indent": [
-      true,
-      "spaces"
-    ],
-    "interface-name": false,
+    "indent": [true, "spaces", 2],
+    "interface-name": [true, "always-prefix"],
     "interface-over-type-literal": true,
     "label-position": true,
     "max-line-length": [
@@ -80,6 +73,8 @@
     "no-angle-bracket-type-assertion": false,
     "no-arg": true,
     "no-bitwise": true,
+    "no-conflicting-lifecycle": true,
+    "no-consecutive-blank-lines": true,
     "no-console": [
       true,
       "debug",
@@ -94,13 +89,18 @@
     "no-empty": false,
     "no-empty-interface": false,
     "no-eval": true,
-    "no-inferrable-types": [
-      true,
-      "ignore-params"
-    ],
+    "no-host-metadata-property": true,
+    "no-inferrable-types": [true, "ignore-params"],
+    "no-input-rename": true,
+    "no-inputs-metadata-property": true,
     "no-misused-new": true,
     "no-non-null-assertion": true,
+    "no-output-native": true,
+    "no-output-on-prefix": true,
+    "no-output-rename": true,
+    "no-outputs-metadata-property": true,
     "no-redundant-jsdoc": true,
+    "no-var-requires": true,
     "no-shadowed-variable": true,
     "no-string-literal": false,
     "no-string-throw": true,
@@ -108,8 +108,8 @@
     "no-trailing-whitespace": false,
     "no-unnecessary-initializer": true,
     "no-unused-expression": true,
-    "no-use-before-declare": true,
     "no-var-keyword": true,
+    "object-literal-key-quotes": [true, "as-needed"],
     "object-literal-shorthand": true,
     "object-literal-sort-keys": false,
     "one-line": [
@@ -121,20 +121,13 @@
     ],
     "ordered-imports": false,
     "prefer-const": true,
-    "quotemark": [
-      true,
-      "single"
-    ],
+    "quotemark": [true, "single"],
     "radix": true,
-    "semicolon": [
-      true,
-      "always"
-    ],
-    "trailing-comma": false,
-    "triple-equals": [
-      true,
-      "allow-null-check"
-    ],
+    "semicolon": [true, "always"],
+    "template-banana-in-box": true,
+    "template-no-negated-async": true,
+    "trailing-comma": true,
+    "triple-equals": [true],
     "typedef-whitespace": [
       true,
       {
@@ -145,12 +138,10 @@
         "variable-declaration": "nospace"
       }
     ],
-    "typeof-compare": true,
     "unified-signatures": true,
-    "variable-name": [
-      true,
-      "allow-leading-underscore"
-    ],
+    "use-lifecycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "variable-name": [true, "allow-leading-underscore"],
     "whitespace": [
       true,
       "check-branch",
@@ -158,17 +149,7 @@
       "check-operator",
       "check-separator",
       "check-type"
-    ],
-    "no-output-on-prefix": true,
-    "use-input-property-decorator": true,
-    "use-output-property-decorator": true,
-    "use-host-property-decorator": true,
-    "no-input-rename": true,
-    "no-output-rename": true,
-    "use-life-cycle-interface": true,
-    "use-pipe-transform-interface": true,
-    "component-class-suffix": true,
-    "directive-class-suffix": true,
-    "invoke-injectable": true
-  }
+    ]
+  },
+  "rulesDirectory": ["codelyzer"]
 }

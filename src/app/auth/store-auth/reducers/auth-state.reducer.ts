@@ -1,17 +1,17 @@
 import { AuthActions, AuthActionTypes } from '../actions/auth.actions';
-import { User } from '../../interfaces';
+import { IUser } from '../../interfaces';
 
-export interface AuthState {
+export interface IAuthState {
   isLoggedIn: boolean;
-  user: User;
+  user: IUser;
 }
 
-export const authInitialState: AuthState = {
+export const authInitialState: IAuthState = {
   isLoggedIn: false,
   user: undefined
 };
 
-export function authReducer(state = authInitialState, action: AuthActions): AuthState {
+export function authReducer(state = authInitialState, action: AuthActions): IAuthState {
   switch (action.type) {
     case AuthActionTypes.LoginAction: {
       return {

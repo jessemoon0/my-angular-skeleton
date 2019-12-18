@@ -14,7 +14,7 @@ import { Observable } from 'rxjs';
 import { select, Store } from '@ngrx/store';
 // import { isLoggedIn } from '../store-auth/selectors/auth.selectors';
 import { tap } from 'rxjs/operators';
-import { AppState } from '../../core/store-app/reducers';
+import { IAppState } from '../../core/store-app/reducers';
 import { isLoggedIn } from '../store-auth/selectors/auth.selectors';
 
 @Injectable({
@@ -22,7 +22,7 @@ import { isLoggedIn } from '../store-auth/selectors/auth.selectors';
 })
 export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
 
-  constructor(private store: Store<AppState>, private router: Router) { }
+  constructor(private store: Store<IAppState>, private router: Router) { }
 
   public canActivate(
     next: ActivatedRouteSnapshot,

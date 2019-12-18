@@ -2,8 +2,8 @@ import { ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { environment } from '../../../../environments/environment';
 import { storeFreeze } from 'ngrx-store-freeze';
 
-export interface AppState {}
+export interface IAppState {}
 
-export const reducers: ActionReducerMap<AppState> = {};
+export const reducers: ActionReducerMap<IAppState> = {};
 
-export const metaReducers: MetaReducer<AppState>[] = !environment.production ? [storeFreeze] : [];
+export const metaReducers: MetaReducer<IAppState>[] = !environment.production ? [storeFreeze] : [];

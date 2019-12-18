@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
-import { AppState } from '../../../core/store-app/reducers';
+import { IAppState } from '../../../core/store-app/reducers';
 import { SandboxActivated } from '../../store-sandbox/actions/sandbox.actions';
 import { selectIsSandboxActive } from '../../store-sandbox/selectors/sandbox.selectors';
-import { take, takeUntil } from 'rxjs/operators';
+import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -17,7 +17,7 @@ export class SandboxComponent implements OnInit, OnDestroy {
   
   private destroy$: Subject<void> = new Subject<void>();
   
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<IAppState>) { }
   
   ngOnInit() {
     this.store.pipe(select(selectIsSandboxActive))
@@ -25,6 +25,10 @@ export class SandboxComponent implements OnInit, OnDestroy {
       .subscribe(
         (isActive: boolean) => console.log('Is Active from store: ', isActive)
       );
+    if (true) {
+        const test = 0;
+    }
+    
   }
   
   public testAction() {
