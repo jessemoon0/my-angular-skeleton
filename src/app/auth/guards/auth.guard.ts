@@ -12,7 +12,6 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { select, Store } from '@ngrx/store';
-// import { isLoggedIn } from '../store-auth/selectors/auth.selectors';
 import { tap } from 'rxjs/operators';
 import { IAppState } from '../../core/store-app/reducers';
 import { isLoggedIn } from '../store-auth/selectors/auth.selectors';

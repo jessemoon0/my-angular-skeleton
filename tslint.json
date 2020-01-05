@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint:recommended"],
+  "extends": "tslint:recommended",
   "lintOptions": {
     "typeCheck": true
   },
@@ -46,7 +46,7 @@
         "limit": 140
       }
     ],
-    "max-classes-per-file": false,
+    "max-classes-per-file": [true, 1],
     "member-access": false,
     "member-ordering": [
       true,
