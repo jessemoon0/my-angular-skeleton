@@ -7,8 +7,6 @@ import { SandboxRootComponent } from './sandbox-root/sandbox-root.component';
 import { SandboxComponent } from './sandbox-root/sandbox/sandbox.component';
 import { StoreModule } from '@ngrx/store';
 import * as fromSandbox from './store-sandbox/reducers/sandbox.reducer';
-import { EffectsModule } from '@ngrx/effects';
-import { SandboxEffects } from './store-sandbox/effects/sandbox.effects';
 
 @NgModule({
   declarations: [
@@ -18,8 +16,7 @@ import { SandboxEffects } from './store-sandbox/effects/sandbox.effects';
   imports: [
     SharedModule,
     SandboxRoutingModule,
-    StoreModule.forFeature('sandboxState', fromSandbox.sandboxReducer),
-    EffectsModule.forFeature([SandboxEffects])
+    StoreModule.forFeature('sandboxState', fromSandbox.sandboxReducer)
   ]
 })
 export class SandboxModule { }
