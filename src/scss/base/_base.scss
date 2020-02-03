@@ -27,7 +27,6 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem;
   @include width(tab-port) { // width < 900px
     padding: 0;
   }

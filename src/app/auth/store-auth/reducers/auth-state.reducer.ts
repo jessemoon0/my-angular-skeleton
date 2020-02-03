@@ -1,9 +1,9 @@
 import { AuthActions, AuthActionTypes } from '../actions/auth.actions';
-import { IUser } from '../../interfaces';
+import { User } from '../../models';
 
 export interface IAuthState {
   isLoggedIn: boolean;
-  user: IUser;
+  user: User;
 }
 
 export const authInitialState: IAuthState = {

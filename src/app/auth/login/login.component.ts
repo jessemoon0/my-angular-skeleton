@@ -16,13 +16,8 @@ export class LoginComponent implements OnDestroy {
   private destroy$: Subject<void> = new Subject();
 
   constructor(private authService: AuthService, private store: Store<IAppState>) { }
-
-  ngOnDestroy() {
-    this.destroy$.next();
-    this.destroy$.complete();
-  }
-
-  onLoginClick() {
+  
+  public onLoginClick() {
     this.authService.login()
       .pipe(takeUntil(this.destroy$))
       .subscribe((user) => {
@@ -30,6 +25,11 @@ export class LoginComponent implements OnDestroy {
           this.store.dispatch(new LoginAction({user}));
         }
       });
+  }
+  
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
 }

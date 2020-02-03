@@ -46,7 +46,7 @@
         "limit": 140
       }
     ],
-    "max-classes-per-file": [true, 1],
+    "max-classes-per-file": false,
     "member-access": false,
     "member-ordering": [
       true,
@@ -70,6 +70,7 @@
         ]
       }
     ],
+    "newline-before-return": true,
     "no-angle-bracket-type-assertion": false,
     "no-arg": true,
     "no-bitwise": true,
