@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { StoreModule } from '@ngrx/store';
 import * as fromAuthState from './store-auth/reducers/auth-state.reducer';
-import { MatButtonModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [AuthComponent, LoginComponent],

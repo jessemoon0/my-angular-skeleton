@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-skeleton"
+    }
+  },
+  "defaultProject": "angular-skeleton",
+  "cli": {
+    "analytics": "98cfdb60-6db7-4f68-b5de-f8b22057dc05"
+  }
 }

@@ -1,5 +1,6 @@
 import { Params, RouterStateSnapshot } from '@angular/router';
 import { RouterStateSerializer } from '@ngrx/router-store';
+import { Injectable } from "@angular/core";
 
 export interface IRouterStateUrl {
   url: string;
@@ -7,6 +8,7 @@ export interface IRouterStateUrl {
   queryParams: Params;
 }
 
+@Injectable()
 export class CustomSerializer implements RouterStateSerializer<IRouterStateUrl> {
   serialize(routerState: RouterStateSnapshot): IRouterStateUrl {
     let route = routerState.root;
