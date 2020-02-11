@@ -34,6 +34,12 @@
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "run-p lint",
+      "pre-push": "run-p build"
+    }
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.1",
     "@angular/cli": "~9.0.1",
@@ -45,6 +51,7 @@
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "^13.7.0",
     "codelyzer": "^5.1.2",
+    "husky": "^4.2.1",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.4.1",
@@ -53,6 +60,7 @@
     "karma-jasmine": "~3.1.0",
     "karma-jasmine-html-reporter": "^1.5.2",
     "ngrx-store-freeze": "^0.2.4",
+    "npm-run-all": "^4.1.5",
     "protractor": "~5.4.3",
     "ts-node": "~8.6.2",
     "tslint": "~6.0.0",

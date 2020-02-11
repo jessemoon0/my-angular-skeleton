@@ -6,12 +6,12 @@ export enum SandboxActionTypes {
 }
 
 export class SandboxActivated implements Action {
-  readonly type = SandboxActionTypes.SandboxActivated;
+  public readonly type = SandboxActionTypes.SandboxActivated;
   constructor(public payload: { isActive: boolean }) {}
 }
 
 export class UpdateSandboxDataSet1 implements Action {
-  readonly type = SandboxActionTypes.UpdateSandboxDataSet1;
+  public readonly type = SandboxActionTypes.UpdateSandboxDataSet1;
   constructor(public payload: { data: 'test5' }) {}
 }
 

@@ -16,7 +16,7 @@ export class SandboxRootComponent implements OnInit, OnDestroy {
   
   constructor(private store: Store<IAppState>) { }
   
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.store.pipe(select(selectSandboxData))
       .pipe(takeUntil(this.destroy$))
       .subscribe(
@@ -24,7 +24,7 @@ export class SandboxRootComponent implements OnInit, OnDestroy {
       );
   }
   
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
   }

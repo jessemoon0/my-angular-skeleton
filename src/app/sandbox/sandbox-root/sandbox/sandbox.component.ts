@@ -19,7 +19,7 @@ export class SandboxComponent implements OnInit, OnDestroy {
   
   constructor(private store: Store<IAppState>) { }
   
-  ngOnInit() {
+  public ngOnInit() {
     this.store.pipe(select(selectIsSandboxActive))
       .pipe(takeUntil(this.destroy$))
       .subscribe(
@@ -36,7 +36,7 @@ export class SandboxComponent implements OnInit, OnDestroy {
     this.store.dispatch(new SandboxActivated({ isActive: this.isActivated }));
   }
   
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
   }

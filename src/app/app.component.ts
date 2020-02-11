@@ -6,12 +6,12 @@ import cssVars from 'css-vars-ponyfill';
   template: `<router-outlet></router-outlet>`
 })
 export class AppComponent implements OnInit {
-
-  ngOnInit(): void {
+  
+  public ngOnInit(): void {
     this.useCssVarsInIE();
   }
 
-  useCssVarsInIE() {
+  private useCssVarsInIE() {
     cssVars();
   }
 }
