@@ -12,24 +12,23 @@ import { IAppState } from '../../core/store-app/reducers';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnDestroy {
-
   private destroy$: Subject<void> = new Subject();
 
-  constructor(private authService: AuthService, private store: Store<IAppState>) { }
-  
+  constructor(private authService: AuthService, private store: Store<IAppState>) {}
+
   public onLoginClick() {
-    this.authService.login()
+    this.authService
+      .login()
       .pipe(takeUntil(this.destroy$))
       .subscribe((user) => {
         if (user) {
-          this.store.dispatch(new LoginAction({user}));
+          this.store.dispatch(new LoginAction({ user }));
         }
       });
   }
-  
+
   public ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
   }
-
 }

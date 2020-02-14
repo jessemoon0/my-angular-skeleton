@@ -12,33 +12,29 @@ import { Subject } from 'rxjs';
   styleUrls: ['./sandbox.component.scss']
 })
 export class SandboxComponent implements OnInit, OnDestroy {
-  
   public isActivated = false;
-  
+
   private destroy$: Subject<void> = new Subject<void>();
-  
-  constructor(private store: Store<IAppState>) { }
-  
+
+  constructor(private store: Store<IAppState>) {}
+
   public ngOnInit() {
-    this.store.pipe(select(selectIsSandboxActive))
+    this.store
+      .pipe(select(selectIsSandboxActive))
       .pipe(takeUntil(this.destroy$))
-      .subscribe(
-        (isActive: boolean) => console.log('Is Active from store: ', isActive)
-      );
+      .subscribe((isActive: boolean) => console.log('Is Active from store: ', isActive));
     if (true) {
-        const test = 0;
+      const test = 0;
     }
-    
   }
-  
+
   public testAction() {
     this.isActivated = !this.isActivated;
     this.store.dispatch(new SandboxActivated({ isActive: this.isActivated }));
   }
-  
+
   public ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
   }
-  
 }

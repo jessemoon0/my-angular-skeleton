@@ -10,15 +10,14 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ],
-      imports: [ HttpClientTestingModule ],
+      declarations: [LoginComponent],
+      imports: [HttpClientTestingModule],
       providers: [
         provideMockStore({
-          selectors: [],
-        }),
+          selectors: []
+        })
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

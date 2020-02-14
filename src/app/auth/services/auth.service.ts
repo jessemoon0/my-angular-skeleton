@@ -6,7 +6,6 @@ import { IUser } from '../models';
   providedIn: 'root'
 })
 export class AuthService {
-
   constructor(private http: HttpClient) {}
 
   public login() {

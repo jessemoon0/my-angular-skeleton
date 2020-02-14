@@ -24,7 +24,8 @@ export function sandboxReducer(state = sandboxInitialState, action: SandboxActio
   switch (action.type) {
     case SandboxActionTypes.SandboxActivated: {
       return {
-        ...state, isSandboxActivated: action.payload.isActive
+        ...state,
+        isSandboxActivated: action.payload.isActive
       };
     }
     case SandboxActionTypes.UpdateSandboxDataSet1: {

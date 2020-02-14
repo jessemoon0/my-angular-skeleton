@@ -9,10 +9,9 @@ describe('SandboxRootComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SandboxRootComponent ],
+      declarations: [SandboxRootComponent],
       imports: [RouterTestingModule]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

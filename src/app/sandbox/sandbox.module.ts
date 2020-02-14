@@ -9,14 +9,11 @@ import { StoreModule } from '@ngrx/store';
 import * as fromSandbox from './store-sandbox/reducers/sandbox.reducer';
 
 @NgModule({
-  declarations: [
-    SandboxRootComponent,
-    SandboxComponent
-  ],
+  declarations: [SandboxRootComponent, SandboxComponent],
   imports: [
     SharedModule,
     SandboxRoutingModule,
     StoreModule.forFeature('sandboxState', fromSandbox.sandboxReducer)
   ]
 })
-export class SandboxModule { }
+export class SandboxModule {}

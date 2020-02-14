@@ -20,8 +20,7 @@ import { isLoggedIn } from '../store-auth/selectors/auth.selectors';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
-
-  constructor(private store: Store<IAppState>, private router: Router) { }
+  constructor(private store: Store<IAppState>, private router: Router) {}
 
   public canActivate(
     next: ActivatedRouteSnapshot,
@@ -37,7 +36,10 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
     return this.canEnterTheRoute();
   }
 
-  public canLoad(route: Route, segments: UrlSegment[]): Observable<boolean> | Promise<boolean> | boolean {
+  public canLoad(
+    route: Route,
+    segments: UrlSegment[]
+  ): Observable<boolean> | Promise<boolean> | boolean {
     return this.canEnterTheRoute();
   }
 
@@ -54,5 +56,4 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
       })
     );
   }
-
 }

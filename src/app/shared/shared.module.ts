@@ -8,12 +8,6 @@ const sharedDirectives: any[] = [];
 
 @NgModule({
   declarations: [sharedPipes, sharedDirectives],
-  exports: [
-    CommonModule,
-    FlexLayoutModule,
-    MaterialModule,
-    sharedPipes,
-    sharedDirectives
-  ]
+  exports: [CommonModule, FlexLayoutModule, MaterialModule, sharedPipes, sharedDirectives]
 })
-export class SharedModule { }
+export class SharedModule {}
