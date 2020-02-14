@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
 // 5: Add Analytics (optional)
 // 6: Remove test-data folder from dist.
 
-// TODO: Learn and setup deployment
+// TODO: Learn and setup deployment. Then Remove Husky npm run build from push.
 // --> Upload to AWS and automate.
 // TODO: Version bumps.
 // TODO: Add rxjs lint: https://cartant.github.io/rxjs-tslint-rules/
