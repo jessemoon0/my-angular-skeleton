@@ -3,10 +3,10 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
   // Good practice to add box-sizing: border-box in body and inherit here
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 // Root font size for REM units (responsive design)
@@ -32,26 +32,35 @@ body {
   }
 }
 
-input, label, button, a, p, i {
+input,
+label,
+button,
+a,
+p,
+i {
   font-family: var(--font-family);
-  outline: none;
   margin: 0;
+  outline: none;
+
   &:focus {
     outline: none;
   }
+
   &:hover {
     text-decoration: none;
   }
 }
 
-a, a > * {
-  outline:none;
-  cursor:pointer;
-  text-decoration:none;
-  &:focus, &:hover {
-    outline:none;
-    color:#fff;
-    text-decoration:none;
+a,
+a > * {
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    text-decoration: none;
   }
 }
 
@@ -61,8 +70,8 @@ ul {
 }
 
 button {
+  border: 0;
   cursor: pointer;
-  border: none;
   text-decoration: none;
 }
 

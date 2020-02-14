@@ -32,9 +32,11 @@ export class AppComponent implements OnInit {
 // 3: Push to GIT: FOLLOW INSTRUCTIONS IN Angular Tutorial
 // 4: Use sandbox files to write other feature modules
 // 5: Add Analytics (optional)
+// 6: Remove test-data folder from dist.
 
 // TODO: Learn and setup deployment
 // --> Upload to AWS and automate.
 // TODO: Version bumps.
-// TODO: Remove test-data folder from dist.
-// TODO: Add universal
+// TODO: Add rxjs lint: https://cartant.github.io/rxjs-tslint-rules/
+// TODO: Check to Add PWA
+// TODO: Add universal (Optional)
