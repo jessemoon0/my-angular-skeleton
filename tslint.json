@@ -1,13 +1,10 @@
 {
-  "extends": ["tslint:recommended"],
+  "extends": ["tslint:recommended", "tslint-plugin-prettier", "tslint-config-prettier"],
   "lintOptions": {
     "typeCheck": true
   },
   "linterOptions": {
-    "exclude": [
-      "e2e/**",
-      "src/**/*.spec.ts"
-    ]
+    "exclude": ["e2e/**", "src/**/*.spec.ts"]
   },
   "rules": {
     "array-type": false,
@@ -17,30 +14,17 @@
     "class-name": true,
     "comment-format": [true, "check-space"],
     "component-class-suffix": true,
-    "component-selector": [
-      true,
-      "element",
-      "app",
-      "kebab-case"
-    ],
+    "component-selector": [true, "element", "app", "kebab-case"],
     "contextual-lifecycle": true,
     "curly": true,
     "deprecation": {
       "severity": "warning"
     },
     "directive-class-suffix": true,
-    "directive-selector": [
-      true,
-      "attribute",
-      "app",
-      "camelCase"
-    ],
+    "directive-selector": [true, "attribute", "app", "camelCase"],
     "eofline": true,
     "forin": true,
-    "import-blacklist": [
-      true,
-      "rxjs/Rx"
-    ],
+    "import-blacklist": [true, "rxjs/Rx"],
     "import-destructuring-spacing": true,
     "import-spacing": true,
     "indent": [true, "spaces", 2],
@@ -85,14 +69,7 @@
     "no-conditional-assignment": true,
     "no-conflicting-lifecycle": true,
     "no-consecutive-blank-lines": true,
-    "no-console": [
-      true,
-      "debug",
-      "info",
-      "time",
-      "timeEnd",
-      "trace"
-    ],
+    "no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-super": true,
@@ -125,13 +102,7 @@
     "object-literal-key-quotes": [true, "as-needed"],
     "object-literal-shorthand": true,
     "object-literal-sort-keys": false,
-    "one-line": [
-      true,
-      "check-open-brace",
-      "check-catch",
-      "check-else",
-      "check-whitespace"
-    ],
+    "one-line": [true, "check-open-brace", "check-catch", "check-else", "check-whitespace"],
     "only-arrow-functions": [true, "allow-named-functions"],
     "ordered-imports": false,
     "prefer-const": true,
@@ -165,12 +136,7 @@
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
     "variable-name": {
-      "options": [
-        "check-format",
-        "allow-leading-underscore",
-        "allow-pascal-case",
-        "ban-keywords"
-      ]
+      "options": ["check-format", "allow-leading-underscore", "allow-pascal-case", "ban-keywords"]
     },
     "whitespace": [
       true,
