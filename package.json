@@ -45,7 +45,7 @@
   },
   "lint-staged": {
     "*.scss": [
-      "stylelint src/**/*.scss --config .stylelintrc.json --fix"
+      "stylelint --config .stylelintrc.json --fix"
     ]
   },
   "devDependencies": {
