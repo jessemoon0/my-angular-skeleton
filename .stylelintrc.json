@@ -36,10 +36,17 @@
     "max-nesting-depth": [
       1,
       {
-        "ignoreAtRules": ["each", "media", "supports", "include"]
+        "ignoreAtRules": ["each", "media", "supports", "include"],
+        "ignore": ["pseudo-classes"]
       }
     ],
     "media-feature-name-no-vendor-prefix": null,
+    "media-feature-name-no-unknown": [
+      true,
+      {
+        "ignoreMediaFeatureNames": ["min-device-pixel-ratio"]
+      }
+    ],
     "media-feature-parentheses-space-inside": "never",
     "no-descending-specificity": null,
     "no-empty-source": null,
@@ -99,7 +106,8 @@
     "selector-max-compound-selectors": 3,
     "selector-max-id": 0,
     "selector-no-qualifying-type": [
-      true, {
+      true,
+      {
         "ignore": ["attribute"]
       }
     ],
