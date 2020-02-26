@@ -44,8 +44,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-p lint-staged lint prettier:changes",
-      "pre-push": "run-p build:dev",
+      "pre-commit": "run-s lint-staged lint prettier:changes",
+      "pre-push": "run-s build:dev",
       "post-merge": "npm i"
     }
   },
