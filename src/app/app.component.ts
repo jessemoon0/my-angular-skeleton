@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import cssVars from 'css-vars-ponyfill';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,17 +6,9 @@ import cssVars from 'css-vars-ponyfill';
     <router-outlet></router-outlet>
   `
 })
-export class AppComponent implements OnInit {
-  public ngOnInit(): void {
-    this.useCssVarsInIE();
-  }
+export class AppComponent {}
 
-  private useCssVarsInIE() {
-    cssVars();
-  }
-}
-
-// *** Should Support Safari, IE11, Edge, Chrome, Firefox ***
+// *** Should Support Safari, Edge, Chrome, Firefox ***
 
 // To MAKE APPS FROM THIS SKELETON:
 
