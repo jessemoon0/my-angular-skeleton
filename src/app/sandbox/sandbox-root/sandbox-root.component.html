@@ -1,5 +1,10 @@
-<p>
-  sandbox-root works!
-</p>
+<ng-container *transloco="let text; read: 'NAV_BAR'">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <a mat-button href="#"> {{ text('TEST') }} </a>
+      <app-transloco-language-changer></app-transloco-language-changer>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+</ng-container>

@@ -4,6 +4,8 @@ import { IAppState } from '../../core/store-app/reducers';
 import { selectSandboxData } from '../store-sandbox/selectors/sandbox.selectors';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { TranslocoService } from '@ngneat/transloco';
+import { TranslocoToggleLanguageService } from '../../transloco/services';
 
 @Component({
   selector: 'app-sandbox-root',

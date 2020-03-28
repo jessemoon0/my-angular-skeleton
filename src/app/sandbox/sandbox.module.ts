@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { SandboxRoutingModule } from './sandbox-routing.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { TranslocoLanguageModule } from '../transloco/transloco-language.module';
 
 // Components
 import { SandboxRootComponent } from './sandbox-root/sandbox-root.component';
@@ -13,7 +15,9 @@ import * as fromSandbox from './store-sandbox/reducers/sandbox.reducer';
   imports: [
     SharedModule,
     SandboxRoutingModule,
-    StoreModule.forFeature('sandboxState', fromSandbox.sandboxReducer)
+    MatToolbarModule,
+    StoreModule.forFeature('sandboxState', fromSandbox.sandboxReducer),
+    TranslocoLanguageModule
   ]
 })
 export class SandboxModule {}

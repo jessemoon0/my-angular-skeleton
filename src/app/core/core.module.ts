@@ -9,11 +9,13 @@ import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router
 import { CustomSerializer } from './store-app/custom-route-serializer';
 import { NetworkErrorInterceptor } from './interceptors';
 import { EffectsModule } from '@ngrx/effects';
+import { TranslocoRootModule } from '../transloco/transloco-root.module';
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
     HttpClientModule,
+    TranslocoRootModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: { strictStateImmutability: true, strictActionImmutability: true }

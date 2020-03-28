@@ -32,6 +32,7 @@
     "@angular/platform-browser": "~9.0.2",
     "@angular/platform-browser-dynamic": "~9.0.2",
     "@angular/router": "~9.0.2",
+    "@ngneat/transloco": "^2.14.0",
     "@ngrx/effects": "^8.6.0",
     "@ngrx/entity": "^8.6.0",
     "@ngrx/router-store": "^8.6.0",
@@ -43,7 +44,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-s lint-staged lint prettier:changes",
+      "pre-commit": "run-s prettier:changes lint-staged lint",
       "pre-push": "run-s build:dev",
       "post-merge": "npm i"
     }
