@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve --port 4001",
     "build:dev": "rimraf dist && ng build",
-    "build": "rimraf dist && ng build --prod",
+    "transloco:optimize": "transloco-optimize dist/angular-skeleton/assets/i18n",
+    "build": "rimraf dist && ng build --prod && npm run transloco:optimize",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
     "test": "ng test",
     "lint-staged": "lint-staged",
@@ -33,6 +34,7 @@
     "@angular/platform-browser-dynamic": "~9.0.2",
     "@angular/router": "~9.0.2",
     "@ngneat/transloco": "^2.14.0",
+    "@ngneat/transloco-optimize": "^1.0.1",
     "@ngrx/effects": "^8.6.0",
     "@ngrx/entity": "^8.6.0",
     "@ngrx/router-store": "^8.6.0",
@@ -44,8 +46,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-s prettier:changes lint-staged lint",
-      "pre-push": "run-s build:dev",
+      "pre-commit": "",
+      "pre-push": "run-s prettier:changes lint-staged lint",
       "post-merge": "npm i"
     }
   },

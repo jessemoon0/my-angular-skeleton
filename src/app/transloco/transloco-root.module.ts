@@ -12,6 +12,9 @@ import { translocoHttpLoader } from './services/transloco-http-loader.service';
         availableLangs: ['en', 'es'],
         defaultLang: 'en',
         fallbackLang: 'en',
+        flatten: {
+          aot: environment.production
+        },
         missingHandler: {
           logMissingKey: true
         },
