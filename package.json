@@ -4,9 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4001",
-    "build:dev": "rimraf dist && ng build",
     "transloco:optimize": "transloco-optimize dist/angular-skeleton/assets/i18n",
-    "build": "rimraf dist && ng build --prod && npm run transloco:optimize",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
     "test": "ng test",
     "lint-staged": "lint-staged",
@@ -18,7 +16,10 @@
     "prettier:changes": "pretty-quick --staged",
     "prettier:format-all": "prettier --config .prettierrc.json --write 'src/{app,environments,assets}/**/*{.ts,.js,.json,.html}'",
     "e2e": "ng e2e",
-    "analyze-bundle": "ng build --stats-json && webpack-bundle-analyzer dist/angular-skeleton/stats-es2015.json"
+    "analyze-bundle": "ng build --stats-json && webpack-bundle-analyzer dist/angular-skeleton/stats-es2015.json",
+    "build:dev": "rimraf dist && ng build",
+    "build": "rimraf dist && ng build --prod && npm run transloco:optimize",
+    "deploy:firebase": "npm run build && firebase deploy"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +28,7 @@
     "@angular/common": "~9.1.3",
     "@angular/compiler": "~9.1.3",
     "@angular/core": "~9.1.3",
+    "@angular/fire": "^6.0.0",
     "@angular/flex-layout": "^9.0.0-beta.29",
     "@angular/forms": "~9.1.3",
     "@angular/material": "^9.2.1",
@@ -40,6 +42,7 @@
     "@ngrx/router-store": "^9.1.0",
     "@ngrx/store": "^9.1.0",
     "core-js": "^3.6.5",
+    "firebase": "^7.14.2",
     "rxjs": "~6.5.5",
     "tslib": "^1.11.1",
     "zone.js": "~0.10.3"
