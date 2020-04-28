@@ -7,15 +7,13 @@
     "transloco:optimize": "transloco-optimize dist/angular-skeleton/assets/i18n",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
     "test": "ng test",
-    "lint-staged": "lint-staged",
-    "lint:scss:format-all": "stylelint src/**/*.scss --config .stylelintrc.json --fix",
-    "lint:scss": "stylelint --config .stylelintrc.json --fix",
-    "lint:ts:format-all": "ng lint --fix",
-    "lint:ts": "ng lint",
-    "lint": "run-p lint:ts",
-    "prettier:changes": "pretty-quick --staged",
-    "prettier:format-all": "prettier --config .prettierrc.json --write 'src/{app,environments,assets}/**/*{.ts,.js,.json,.html}'",
     "e2e": "ng e2e",
+    "lint-staged": "lint-staged",
+    "lint:scss": "stylelint src/**/*.scss --fix",
+    "lint:ts:fix": "ng lint --fix",
+    "lint": "ng lint",
+    "prettier:changes": "pretty-quick --staged --pattern '**/*.*(js|ts|html|json)'",
+    "prettier:format-all": "prettier --config .prettierrc.json --write 'src/{app,environments,assets}/**/*{.ts,.js,.json,.html}'",
     "analyze-bundle": "ng build --stats-json && webpack-bundle-analyzer dist/angular-skeleton/stats-es2015.json",
     "build:dev": "rimraf dist && ng build",
     "build": "rimraf dist && ng build --prod && npm run transloco:optimize",
@@ -46,18 +44,6 @@
     "rxjs": "~6.5.5",
     "tslib": "^1.11.1",
     "zone.js": "~0.10.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "",
-      "pre-push": "run-s prettier:changes lint-staged lint",
-      "post-merge": "npm i"
-    }
-  },
-  "lint-staged": {
-    "*.scss": [
-      "npm run lint:scss"
-    ]
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.3",
@@ -94,5 +80,17 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.3.0",
     "typescript": "~3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "",
+      "pre-push": "run-s prettier:changes lint-staged lint",
+      "post-merge": "npm i"
+    }
+  },
+  "lint-staged": {
+    "*.scss": [
+      "npm run lint:scss"
+    ]
   }
 }
