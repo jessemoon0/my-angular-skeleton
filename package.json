@@ -17,6 +17,7 @@
     "analyze-bundle": "ng build --stats-json && webpack-bundle-analyzer dist/angular-skeleton/stats-es2015.json",
     "build:dev": "rimraf dist && ng build",
     "build": "rimraf dist && ng build --prod && npm run transloco:optimize",
+    "deploy:firebase:dev": "npm run build && firebase deploy -P dev",
     "deploy:firebase": "npm run build && firebase deploy"
   },
   "private": true,

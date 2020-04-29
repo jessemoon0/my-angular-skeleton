@@ -1,6 +1,6 @@
 export interface IEnvironment {
   production: boolean;
-  apiUrl: string;
+  translocoUrl: string;
   firebaseConfig?: IFirebaseConfig;
 }
 
