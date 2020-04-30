@@ -9,7 +9,6 @@ import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router
 import { CustomSerializer } from './store-app/custom-route-serializer';
 import { NetworkErrorInterceptor } from './interceptors';
 import { EffectsModule } from '@ngrx/effects';
-import { TranslocoRootModule } from '../transloco/transloco-root.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
@@ -17,7 +16,6 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
   imports: [
     BrowserAnimationsModule,
     HttpClientModule,
-    TranslocoRootModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     StoreModule.forRoot(reducers, {

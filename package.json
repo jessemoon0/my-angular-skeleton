@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4001",
-    "transloco:optimize": "transloco-optimize dist/angular-skeleton/assets/i18n",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
     "test": "ng test",
     "e2e": "ng e2e",
@@ -16,8 +15,8 @@
     "prettier:format-all": "prettier --config .prettierrc.json --write 'src/{app,environments,assets}/**/*{.ts,.js,.json,.html}'",
     "analyze-bundle": "ng build --stats-json && webpack-bundle-analyzer dist/angular-skeleton/stats-es2015.json",
     "build:dev": "rimraf dist && ng build",
-    "build": "rimraf dist && ng build --prod && npm run transloco:optimize",
-    "deploy:firebase:dev": "npm run build && firebase deploy -P dev",
+    "build": "rimraf dist && ng build --prod",
+    "deploy:firebase:dev": "npm run build:dev && firebase deploy -P dev",
     "deploy:firebase": "npm run build && firebase deploy"
   },
   "private": true,
@@ -34,8 +33,6 @@
     "@angular/platform-browser": "~9.1.3",
     "@angular/platform-browser-dynamic": "~9.1.3",
     "@angular/router": "~9.1.3",
-    "@ngneat/transloco": "^2.17.0",
-    "@ngneat/transloco-optimize": "^1.0.1",
     "@ngrx/effects": "^9.1.0",
     "@ngrx/entity": "^9.1.0",
     "@ngrx/router-store": "^9.1.0",
