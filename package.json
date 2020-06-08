@@ -12,7 +12,7 @@
     "lint:ts:fix": "ng lint --fix",
     "lint": "ng lint",
     "prettier:changes": "pretty-quick --staged --pattern '**/*.*(js|ts|html|json)'",
-    "prettier:format-all": "prettier --config .prettierrc.json --write 'src/{app,environments,assets}/**/*{.ts,.js,.json,.html}'",
+    "prettier:format-all": "prettier --config .prettierrc --write 'src/{app,environments,assets}/**/*{.ts,.js,.json,.html}'",
     "analyze-bundle": "ng build --stats-json && webpack-bundle-analyzer dist/angular-skeleton/stats-es2015.json",
     "build:dev": "rimraf dist && ng build",
     "build": "rimraf dist && ng build --prod",

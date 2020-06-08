@@ -4,7 +4,7 @@
     "typeCheck": true
   },
   "linterOptions": {
-    "exclude": ["e2e/**", "src/**/*.spec.ts"]
+    "exclude": ["e2e/**", "src/**/*.spec.ts", "node_modules/**"]
   },
   "rules": {
     "array-type": false,
