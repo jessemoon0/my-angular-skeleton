@@ -1,4 +1,13 @@
 package.json
 package-lock.json
 yarn.lock
+/tmp
+/node_modules
+/out-tsc
 dist
+www
+src/assets/
+**/.DS_Store
+resources
+docker
+.idea
