@@ -1,9 +1,6 @@
 package.json
 package-lock.json
 yarn.lock
-/tmp
-/node_modules
-/out-tsc
 dist
 www
 src/assets/
@@ -11,3 +8,8 @@ src/assets/
 resources
 docker
 .idea
+node_modules
+LICENSE
+lib
+tsconfig.**
+firebase
