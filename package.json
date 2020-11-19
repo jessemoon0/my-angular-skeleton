@@ -1,6 +1,6 @@
 {
-  "name": "material",
-  "version": "0.0.0",
+  "name": "angular-skeleton",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4001",
