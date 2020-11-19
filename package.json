@@ -20,7 +20,6 @@
     "lint": "run-p lint:ts",
     "prettier:changes": "pretty-quick --staged",
     "prettier:format-all": "prettier --config .prettierrc.json --write 'src/{app,environments,assets}/**/*{.ts,.js,.json,.html}'",
-    "e2e": "ng e2e",
     "analyze-bundle": "ng build --stats-json && webpack-bundle-analyzer dist/angular-skeleton/stats-es2015.json"
   },
   "private": true,
