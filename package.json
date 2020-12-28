@@ -13,10 +13,8 @@
     "test:coverage": "jest --collect-coverage",
     "test:no-watch": "jest",
     "lint-staged": "lint-staged",
-    "lint:scss:format-all": "stylelint src/**/*.scss --config .stylelintrc.json --fix",
-    "lint:scss": "stylelint src/**/*.scss --config .stylelintrc.json --fix",
-    "lint:ts:format-all": "ng lint --fix",
-    "lint:ts": "ng lint",
+    "lint:scss:fix": "stylelint src/**/*.scss --syntax=scss --fix --color",
+    "lint:ts:fix": "ng lint --fix",
     "lint": "run-p lint:ts",
     "prettier:changes": "pretty-quick --staged",
     "prettier:format-all": "prettier --config .prettierrc.json --write 'src/{app,environments,assets}/**/*{.ts,.js,.json,.html}'",
@@ -81,12 +79,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-s prettier:changes lint-staged lint"
+      "pre-commit": "run-s -n prettier:changes lint-staged"
     }
   },
   "lint-staged": {
     "*.scss": [
       "npm run lint:scss"
+    ],
+    "*.ts": [
+      "npm run lint"
     ]
   }
 }

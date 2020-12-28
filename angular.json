@@ -94,7 +94,7 @@
               "src/polyfills.ts",
               "src/main.ts",
               "src/test.ts",
-              "e2e/src/app.po.ts",
+              "e2e/*",
               "**/*.spec.ts",
               "**/*.e2e-spec.ts"
             ]
