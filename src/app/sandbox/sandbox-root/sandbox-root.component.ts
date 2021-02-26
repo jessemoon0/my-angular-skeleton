@@ -20,12 +20,6 @@ export class SandboxRootComponent implements OnInit, OnDestroy {
       .pipe(select(selectSandboxData))
       .pipe(takeUntil(this.destroy$))
       .subscribe((data) => console.log('Sandbox Data: ', data));
-    var test = 0;
-    const myProp = 'test';
-
-    const myObj = {
-      myProp: myProp
-    }
   }
 
   public ngOnDestroy(): void {
