@@ -5,9 +5,6 @@
     "ng": "ng",
     "start": "ng serve --port 4001",
     "start:bstack": "ng serve --port=1337 --disableHostCheck=true",
-    "build:dev": "rimraf dist && ng build",
-    "build:stage": "rimraf dist && ng build --configuration=staging",
-    "build": "rimraf dist && ng build --prod",
     "test:ci": "jest --browsers=ChromeHeadless",
     "test": "jest --watch",
     "test:coverage": "jest --collect-coverage",
@@ -15,10 +12,12 @@
     "lint-staged": "lint-staged",
     "lint:scss:fix": "stylelint src/**/*.scss --syntax=scss --fix --color",
     "lint:ts:fix": "ng lint --fix",
-    "lint": "run-p lint:ts",
-    "prettier:changes": "pretty-quick --staged",
-    "prettier:format-all": "prettier --config .prettierrc.json --write 'src/{app,environments,assets}/**/*{.ts,.js,.json,.html}'",
-    "analyze-bundle": "ng build --stats-json && webpack-bundle-analyzer dist/angular-skeleton/stats-es2015.json"
+    "lint": "ng lint",
+    "prettier:changes": "pretty-quick --staged --pattern '**/*.js' --pattern '**/*.ts' --pattern '**/*.html' --pattern '**/*.json'",
+    "prettier:format-all": "prettier --config .prettierrc --write 'src/{app,environments,assets}/**/*{.ts,.js,.json,.html}'",
+    "analyze-bundle": "ng build --stats-json && webpack-bundle-analyzer dist/angular-skeleton/stats-es2015.json",
+    "build:dev": "rimraf dist && ng build",
+    "build": "rimraf dist && ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -47,13 +46,28 @@
   "devDependencies": {
     "@angular-builders/jest": "11.0.0",
     "@angular-devkit/build-angular": "^0.1102.1",
+    "@angular-eslint/builder": "1.0.0",
+    "@angular-eslint/eslint-plugin": "1.0.0",
+    "@angular-eslint/eslint-plugin-template": "1.0.0",
+    "@angular-eslint/schematics": "^1.0.0",
+    "@angular-eslint/template-parser": "1.0.0",
     "@angular/cli": "^11.2.1",
     "@angular/compiler-cli": "^11.2.1",
     "@ngrx/schematics": "^11.0.1",
     "@ngrx/store-devtools": "^11.0.1",
     "@types/jest": "26.0.20",
     "@types/node": "^14.14.28",
+    "@typescript-eslint/eslint-plugin": "4.12.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^4.12.0",
+    "@typescript-eslint/parser": "4.12.0",
     "codelyzer": "^6.0.1",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jasmine": "^4.1.1",
+    "eslint-plugin-jsdoc": "30.7.13",
+    "eslint-plugin-prefer-arrow": "1.2.2",
+    "eslint-plugin-react": "^7.22.0",
     "firebase-tools": "^9.4.0",
     "husky": "^5.0.9",
     "jest": "26.6.3",
@@ -70,22 +84,25 @@
     "stylelint-order": "^4.0.0",
     "stylelint-scss": "^3.19.0",
     "ts-node": "^9.1.1",
-    "tslint": "~6.1.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.3.0",
     "typescript": "4.1.5"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-s -n prettier:changes lint-staged"
+      "pre-push": "run-s -n prettier:changes lint-staged"
     }
   },
   "lint-staged": {
     "*.scss": [
-      "npm run lint:scss"
+      "npm run lint:scss:fix"
     ],
     "*.ts": [
       "npm run lint"
     ]
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "defaults",
+    "not IE 9-11",
+    "not dead"
+  ]
 }

@@ -44,7 +44,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -89,9 +88,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json", "e2e/tsconfig.json"],
+            "lintFilePatterns": [
+              "src/**/*.ts"
+            ],
             "exclude": [
               "**/node_modules/**",
               "src/polyfills.ts",
@@ -100,19 +101,8 @@
               "e2e/*",
               "**/*.spec.ts",
               "**/*.e2e-spec.ts"
-            ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-skeleton:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "angular-skeleton:serve:production"
-            }
+            ],
+            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json"]
           }
         }
       }
