@@ -16,7 +16,8 @@
     "typeRoots": ["node_modules/@types"],
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true
   },
   "exclude": ["node_modules"],
   "angularCompilerOptions": {

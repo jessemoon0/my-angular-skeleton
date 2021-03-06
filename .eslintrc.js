@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'eslint:recommended',
     'prettier',
     'prettier/@typescript-eslint',
     'plugin:@angular-eslint/recommended',
@@ -55,7 +56,7 @@ module.exports = {
       'error',
       {
         type: 'element',
-        prefix: 'app',
+        prefix: 'pro',
         style: 'kebab-case',
       },
     ],
@@ -65,7 +66,7 @@ module.exports = {
       'error',
       {
         type: 'attribute',
-        prefix: 'app',
+        prefix: 'pro',
         style: 'camelCase',
       },
     ],
@@ -204,6 +205,10 @@ module.exports = {
     ],
     '@typescript-eslint/type-annotation-spacing': 'error',
     '@typescript-eslint/unified-signatures': 'error',
+    '@typescript-eslint/no-unused-vars': ['off'],
+    'no-unused-vars': 'warn',
+    'no-useless-escape': 'warn',
+    'no-case-declarations': 'warn',
     'arrow-body-style': 'off',
     'arrow-parens': ['off', 'always'],
     'brace-style': ['error', '1tbs'],

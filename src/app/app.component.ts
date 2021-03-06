@@ -25,7 +25,5 @@ export class AppComponent {}
 // 4: Use sandbox files to write other feature modules
 // 5: Remove test-data folder from dist.
 
-// TODO: Version bumps.
 // TODO: Add rxjs lint: https://cartant.github.io/rxjs-tslint-rules/
-// TODO: Add Analytics (optional)
 // TODO: Check to Add PWA
