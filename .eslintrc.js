@@ -206,7 +206,7 @@ module.exports = {
     '@typescript-eslint/type-annotation-spacing': 'error',
     '@typescript-eslint/unified-signatures': 'error',
     '@typescript-eslint/no-unused-vars': ['off'],
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'error',
     'no-useless-escape': 'warn',
     'no-case-declarations': 'warn',
     'arrow-body-style': 'off',
